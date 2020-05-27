@@ -1,0 +1,1715 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-27T06:21:55.494Z",
+        "line": 5,
+        "name": "Get Latest Foreign Exchange rates with default base currency",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-default-base-currency",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2027000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with default base currency",
+            "match": {
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithDefaultBaseCurrency()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4058000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:01.834Z",
+        "line": 19,
+        "name": "Get Latest Foreign Exchange rates with default base currency",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-default-base-currency;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with default base currency",
+            "match": {
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithDefaultBaseCurrency()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 723000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2152000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "check response contains mandatory parameters and matches currency \"EUR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"EUR\"",
+                  "offset": 66
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseContainsMandatoryParametersAndMatchesCurrency(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 53000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "check response date matches latest date",
+            "match": {
+              "location": "steps.GetExchangeRates.checkResponseDateMatchesLatestDate()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:04.777Z",
+        "line": 22,
+        "name": "Get Latest Foreign Exchange rates with invalid url",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-invalid-url",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with default base currency",
+            "match": {
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithDefaultBaseCurrency()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 564000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user sends the RatesAPI request with invalid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithInvalidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "check RatesAPI http response status code \"404\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"404\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:05.367Z",
+        "line": 34,
+        "name": "Get Past Foreign Exchange rates with default base currency",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-past-foreign-exchange-rates-with-default-base-currency;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2019-10-10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2019-10-10\"",
+                  "offset": 72
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDate(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 852000000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:06.269Z",
+        "line": 45,
+        "name": "Get Past Foreign Exchange rates with default base currency",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-past-foreign-exchange-rates-with-default-base-currency;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2010-10-10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 72
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDate(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 555000000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 179000000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "check response contains mandatory parameters and matches currency \"EUR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"EUR\"",
+                  "offset": 66
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseContainsMandatoryParametersAndMatchesCurrency(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52000000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "check response date matches the specific date \"2010-10-10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 46
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseDateMatchesTheSpecificDate(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:07.080Z",
+        "line": 56,
+        "name": "Get future dated foreign exchange rates with default base currency",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-future-dated-foreign-exchange-rates-with-default-base-currency;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2020-10-10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2020-10-10\"",
+                  "offset": 72
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDate(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 884000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 90000000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "check response contains mandatory parameters and matches currency \"EUR\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"EUR\"",
+                  "offset": 66
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseContainsMandatoryParametersAndMatchesCurrency(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 27000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "check response date matches latest date",
+            "match": {
+              "location": "steps.GetExchangeRates.checkResponseDateMatchesLatestDate()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:08.094Z",
+        "line": 66,
+        "name": "Get exchange rate for historic dates before the year 1999",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-exchange-rate-for-historic-dates-before-the-year-1999;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"1998-12-31\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1998-12-31\"",
+                  "offset": 72
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDate(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1115000000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "check RatesAPI http response status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 64000000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "verify error description matches \"There is no data for dates older then 1999-01-04.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"There is no data for dates older then 1999-01-04.\"",
+                  "offset": 33
+                }
+              ],
+              "location": "steps.GetExchangeRates.verifyErrorDescriptionMatches(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:09.294Z",
+        "line": 77,
+        "name": "Get Latest Foreign Exchange rates with default currency and currency code filter",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-default-currency-and-currency-code-filter;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with default base currency and symbols \"USD,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD,GBP\"",
+                  "offset": 108
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithDefaultBaseCurrencyAndSymbols(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1372000000,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 175000000,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "check response contains mandatory parameters and matches currency \"EUR\" and symbols \"USD,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"EUR\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"USD,GBP\"",
+                  "offset": 84
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseContainsMandatoryParametersAndMatchesCurrencyAndSymbols(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26000000,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "check response date matches latest date",
+            "match": {
+              "location": "steps.GetExchangeRates.checkResponseDateMatchesLatestDate()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:10.901Z",
+        "line": 88,
+        "name": "Get Latest Foreign Exchange rates with user provided base currency",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-user-provided-base-currency;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with user provided base currency \"USD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 102
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithUserProvidedBaseCurrency(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 528000000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 178000000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "check response contains mandatory parameters and matches currency \"USD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 66
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseContainsMandatoryParametersAndMatchesCurrency(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 71000000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "check response date matches latest date",
+            "match": {
+              "location": "steps.GetExchangeRates.checkResponseDateMatchesLatestDate()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:11.698Z",
+        "line": 99,
+        "name": "Get Latest Foreign Exchange rates with user provided base currency and currency code filter",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-user-provided-base-currency-and-currency-code-filter;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 142000000,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with user provided base currency \"USD\" and symbols \"EUR,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 102
+                },
+                {
+                  "val": "\"EUR,GBP\"",
+                  "offset": 120
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithUserProvidedBaseCurrencyAndSymbols(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 838000000,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 126000000,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "check response contains mandatory parameters and matches currency \"USD\" and symbols \"EUR,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"EUR,GBP\"",
+                  "offset": 84
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseContainsMandatoryParametersAndMatchesCurrencyAndSymbols(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31000000,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "check response date matches latest date",
+            "match": {
+              "location": "steps.GetExchangeRates.checkResponseDateMatchesLatestDate()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:12.852Z",
+        "line": 110,
+        "name": "Get Past Foreign Exchange rates with default currency and currency code filter",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-past-foreign-exchange-rates-with-default-currency-and-currency-code-filter;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2010-10-10\" and symbols \"USD,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"USD,GBP\"",
+                  "offset": 97
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDateAndSymbols(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 721000000,
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 105,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 79000000,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "check response contains mandatory parameters and matches currency \"EUR\" and symbols \"USD,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"EUR\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"USD,GBP\"",
+                  "offset": 84
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseContainsMandatoryParametersAndMatchesCurrencyAndSymbols(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23000000,
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "check response date matches the specific date \"2010-10-10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 46
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseDateMatchesTheSpecificDate(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:13.695Z",
+        "line": 121,
+        "name": "Get Past Foreign Exchange rates with user provided base currency",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-past-foreign-exchange-rates-with-user-provided-base-currency;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 114,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2010-10-10\" and base currency \"USD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"USD\"",
+                  "offset": 103
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDateAndBaseCurrency(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 616000000,
+              "status": "passed"
+            },
+            "line": 115,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 116,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 155000000,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "check response contains mandatory parameters and matches currency \"USD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 66
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseContainsMandatoryParametersAndMatchesCurrency(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 67000000,
+              "status": "passed"
+            },
+            "line": 118,
+            "name": "check response date matches the specific date \"2010-10-10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 46
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseDateMatchesTheSpecificDate(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:14.550Z",
+        "line": 132,
+        "name": "Get Past Foreign Exchange rates with user provided base currency and currency codes",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-past-foreign-exchange-rates-with-user-provided-base-currency-and-currency-codes;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 125,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2010-10-10\" and base currency \"USD\" and symbols \"EUR,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"USD\"",
+                  "offset": 103
+                },
+                {
+                  "val": "\"EUR,GBP\"",
+                  "offset": 121
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDateAndBaseCurrencyAndSymbols(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 576000000,
+              "status": "passed"
+            },
+            "line": 126,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 127,
+            "name": "check RatesAPI http response status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 76000000,
+              "status": "passed"
+            },
+            "line": 128,
+            "name": "check response contains mandatory parameters and matches currency \"USD\" and symbols \"EUR,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 66
+                },
+                {
+                  "val": "\"EUR,GBP\"",
+                  "offset": 84
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseContainsMandatoryParametersAndMatchesCurrencyAndSymbols(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29000000,
+              "status": "passed"
+            },
+            "line": 129,
+            "name": "check response date matches the specific date \"2010-10-10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 46
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkResponseDateMatchesTheSpecificDate(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:15.249Z",
+        "line": 141,
+        "name": "Get Latest Foreign Exchange rates with default currency and invalid currency code filter",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-default-currency-and-invalid-currency-code-filter;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 136,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with default base currency and symbols \"USA,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USA,GBP\"",
+                  "offset": 108
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithDefaultBaseCurrencyAndSymbols(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1006000000,
+              "status": "passed"
+            },
+            "line": 137,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 138,
+            "name": "check RatesAPI http response status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:16.272Z",
+        "line": 150,
+        "name": "Get Latest Foreign Exchange rates with invalid base currency",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-invalid-base-currency;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 145,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with user provided base currency \"USA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USA\"",
+                  "offset": 102
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithUserProvidedBaseCurrency(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1179000000,
+              "status": "passed"
+            },
+            "line": 146,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 147,
+            "name": "check RatesAPI http response status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:17.468Z",
+        "line": 159,
+        "name": "Get Latest Foreign Exchange rates with invalid base currency and invalid currency code filter",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-invalid-base-currency-and-invalid-currency-code-filter;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 154,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with user provided base currency \"USA\" and symbols \"EUR,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USA\"",
+                  "offset": 102
+                },
+                {
+                  "val": "\"EUR,GBP\"",
+                  "offset": 120
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithUserProvidedBaseCurrencyAndSymbols(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1360000000,
+              "status": "passed"
+            },
+            "line": 155,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "check RatesAPI http response status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:18.869Z",
+        "line": 160,
+        "name": "Get Latest Foreign Exchange rates with invalid base currency and invalid currency code filter",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-latest-foreign-exchange-rates-with-invalid-base-currency-and-invalid-currency-code-filter;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 154,
+            "name": "user populates RatesAPI request to get Latest Foreign Exchange rates with user provided base currency \"USD\" and symbols \"EUA,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 102
+                },
+                {
+                  "val": "\"EUA,GBP\"",
+                  "offset": 120
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetLatestForeignExchangeRatesWithUserProvidedBaseCurrencyAndSymbols(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1180000000,
+              "status": "passed"
+            },
+            "line": 155,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "check RatesAPI http response status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:20.074Z",
+        "line": 169,
+        "name": "Get Past Foreign Exchange rates with default currency and invalid currency code filter",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-past-foreign-exchange-rates-with-default-currency-and-invalid-currency-code-filter;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 164,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2010-10-10\" and symbols \"USA,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"USA,GBP\"",
+                  "offset": 97
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDateAndSymbols(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1720000000,
+              "status": "passed"
+            },
+            "line": 165,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 166,
+            "name": "check RatesAPI http response status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:21.810Z",
+        "line": 178,
+        "name": "Get Past Foreign Exchange rates with invalid base currency",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-past-foreign-exchange-rates-with-invalid-base-currency;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 173,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2010-10-10\" and base currency \"USA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"USA\"",
+                  "offset": 103
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDateAndBaseCurrency(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1104000000,
+              "status": "passed"
+            },
+            "line": 174,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 175,
+            "name": "check RatesAPI http response status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:22.939Z",
+        "line": 187,
+        "name": "Get Past Foreign Exchange rates with invalid base currency and invalid currency codes",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-past-foreign-exchange-rates-with-invalid-base-currency-and-invalid-currency-codes;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "line": 182,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2010-10-10\" and base currency \"USA\" and symbols \"EUR,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"USA\"",
+                  "offset": 103
+                },
+                {
+                  "val": "\"EUR,GBP\"",
+                  "offset": 121
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDateAndBaseCurrencyAndSymbols(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000000,
+              "status": "passed"
+            },
+            "line": 183,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 184,
+            "name": "check RatesAPI http response status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-27T06:22:23.963Z",
+        "line": 188,
+        "name": "Get Past Foreign Exchange rates with invalid base currency and invalid currency codes",
+        "description": "",
+        "id": "rates-api-test-scenarios;get-past-foreign-exchange-rates-with-invalid-base-currency-and-invalid-currency-codes;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "line": 182,
+            "name": "user populates RatesAPI request to get Foreign Exchange rates with date \"2010-10-10\" and base currency \"USD\" and symbols \"EUA,GBP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2010-10-10\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"USD\"",
+                  "offset": 103
+                },
+                {
+                  "val": "\"EUA,GBP\"",
+                  "offset": 121
+                }
+              ],
+              "location": "steps.GetExchangeRates.userPopulatesRatesAPIRequestToGetPastForeignExchangeRatesWithDateAndBaseCurrencyAndSymbols(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1180000000,
+              "status": "passed"
+            },
+            "line": 183,
+            "name": "user sends the RatesAPI request with valid url",
+            "match": {
+              "location": "steps.GetExchangeRates.userSendsTheRatesAPIRequestWithValidUrl()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 184,
+            "name": "check RatesAPI http response status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 41
+                }
+              ],
+              "location": "steps.GetExchangeRates.checkRatesAPIHttpResponseStatusCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RatesAPI"
+          }
+        ]
+      }
+    ],
+    "name": "Rates API Test Scenarios",
+    "description": "",
+    "id": "rates-api-test-scenarios",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/RatesAPI.feature",
+    "tags": [
+      {
+        "name": "@RatesAPI",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
